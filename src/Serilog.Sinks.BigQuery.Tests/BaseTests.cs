@@ -27,7 +27,8 @@ namespace Serilog.Sinks.BigQuery.Tests
             new MessageTemplate("New message from {MachineName}", 
               new List<MessageTemplateToken>()
               {
-                { new TextToken("localhost", 17) }
+                { new TextToken("New message from ") },
+                { new TextToken("{MachineName}") }
               }
             ),
             new List<LogEventProperty>

@@ -12,18 +12,31 @@ namespace Serilog.Sinks.BigQuery.Sample
       var configuration = LoadConfiguration();
 
       Log.Logger = new LoggerConfiguration()
+      .MinimumLevel.Verbose()
       .Enrich.FromLogContext()
       .Enrich.WithProperty("Host", Environment.MachineName)
       .WriteTo.Console()
-      .WriteTo.BigQuery(configuration.GetSection("BigQuery"), Events.LogEventLevel.Information)
+      .WriteTo.BigQuery(configuration.GetSection("BigQuery"), Events.LogEventLevel.Debug)
       .CreateLogger();
 
 
-      Log.Information("{a} {b}!", "Hello", "World");
-      Log.Warning("{a} {b}!", "Watch out", "World");
+      Log.Debug("{a:l} {b}!", "How are you", "World");
+      Log.Information("{a:l} {b:l}!", "Hello", "World");
+      Log.Warning("{a} {b:l}!", "Watch out", "World");
       Log.Error("{a} {b}!", "Told you", "World");
 
+      try
+      {
+        throw new Exception("This exception was planned.");
+      }
+      catch (Exception ex)
+      {
+        Log.Fatal(ex, "Managed exception: {message}", ex.Message);
+      }
+
       await Task.Delay(60000);
+
+      Log.CloseAndFlush();
     }
 
     private static IConfiguration LoadConfiguration()

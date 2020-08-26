@@ -12,6 +12,7 @@ namespace Serilog.Sinks.BigQuery.Core
     public string Message { get; set; }
     public string Template { get; set; }
     public List<BigQueryLogEventProperty> Properties { get; set; }
+    public string ExceptionStackTrace { get; set; }
 
 
     public static implicit operator BigQueryLogEvent(LogEvent logEvent)
@@ -23,7 +24,8 @@ namespace Serilog.Sinks.BigQuery.Core
         LevelName = logEvent.Level.ToString(),
         Template = logEvent.MessageTemplate.Text,
         Message = logEvent.MessageTemplate.Render(logEvent.Properties),
-        Properties = new List<BigQueryLogEventProperty>()
+        Properties = new List<BigQueryLogEventProperty>(),
+        ExceptionStackTrace = logEvent.Exception?.StackTrace
       };
 
       foreach (var property in logEvent.Properties)
