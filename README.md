@@ -47,3 +47,8 @@ The BigQuery table has the following structure.
 
 >The properties name column could have "." for nested properties in the form of "RootProperty.ChildProperty".
 
+## Google Application Credentials
+
+Required Roles/Permissions:
+- BigQuery Data Editor
+- BigQuery User
