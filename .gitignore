@@ -348,3 +348,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/src/Serilog.Sinks.BigQuery.Sample/Properties/launchSettings.json

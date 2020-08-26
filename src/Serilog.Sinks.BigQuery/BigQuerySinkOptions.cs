@@ -1,8 +1,8 @@
 ﻿using BigQuery.Schema.Helper.Core;
 
-namespace BigQuery.Serilog.Sink
+namespace Serilog.Sinks.BigQuery
 {
-  public class SinkOptions : BigQuerySchemaHelperOptions
+  public class BigQuerySinkOptions : BigQuerySchemaHelperOptions
   {
     public int BatchSizeLimit { get; set; } = 200;
     public int PeriodSeconds { get; set; } = 2;

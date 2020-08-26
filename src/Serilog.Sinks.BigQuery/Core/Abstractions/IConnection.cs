@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BigQuery.Serilog.Sink.Core.Abstractions
+namespace Serilog.Sinks.BigQuery.Core.Abstractions
 {
   public interface IConnection : IDisposable
   {

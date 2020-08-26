@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace BigQuery.Serilog.Sink.Core
+namespace Serilog.Sinks.BigQuery.Core
 {
   public class BigQueryLogEvent
   {
@@ -22,7 +22,8 @@ namespace BigQuery.Serilog.Sink.Core
         LevelNumber = (int)logEvent.Level,
         LevelName = logEvent.Level.ToString(),
         Template = logEvent.MessageTemplate.Text,
-        Message = logEvent.MessageTemplate.ToString(),
+        Message = logEvent.MessageTemplate.Render(logEvent.Properties),
+        Properties = new List<BigQueryLogEventProperty>()
       };
 
       foreach (var property in logEvent.Properties)
@@ -38,7 +39,7 @@ namespace BigQuery.Serilog.Sink.Core
       switch (propertyValue)
       {
         case ScalarValue value:
-          var stringValue = value.Value == null ? value.Value.ToString() : string.Empty;
+          var stringValue = value.Value != null ? value.Value.ToString() : string.Empty;
           properties.Add(new BigQueryLogEventProperty() { Name = propertyName, Value = stringValue });
           break;
         case SequenceValue value:
@@ -59,6 +60,6 @@ namespace BigQuery.Serilog.Sink.Core
   public class BigQueryLogEventProperty
   {
     public string Name { get; set; }
-    public object Value { get; set; }
+    public string Value { get; set; }
   }
 }

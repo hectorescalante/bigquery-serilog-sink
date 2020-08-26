@@ -1,4 +1,4 @@
-﻿using BigQuery.Serilog.Sink.Core.Abstractions;
+﻿using Serilog.Sinks.BigQuery.Core.Abstractions;
 using Serilog.Events;
 using Serilog.Sinks.PeriodicBatching;
 using System;
@@ -6,14 +6,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BigQuery.Serilog.Sink.Core
+namespace Serilog.Sinks.BigQuery.Core
 {
   public class BigQuerySink : PeriodicBatchingSink
   {
-    private readonly SinkOptions _sinkOptions;
+    private readonly BigQuerySinkOptions _sinkOptions;
     private readonly IConnection _connection;
 
-    public BigQuerySink(SinkOptions sinkOptions, IConnection connection) : base(sinkOptions.BatchSizeLimit, new TimeSpan(0, 0, sinkOptions.PeriodSeconds))
+    public BigQuerySink(BigQuerySinkOptions sinkOptions, IConnection connection) : base(sinkOptions.BatchSizeLimit, new TimeSpan(0, 0, sinkOptions.PeriodSeconds))
     {
       _sinkOptions = sinkOptions;
       _connection = connection;

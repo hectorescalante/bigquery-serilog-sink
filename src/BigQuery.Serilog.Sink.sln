@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigQuery.Serilog.Sink", "BigQuery.Serilog.Sink\BigQuery.Serilog.Sink.csproj", "{2BBEFCC7-7030-4F6B-97FC-0EA7AC20CA79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Sinks.BigQuery", "Serilog.Sinks.BigQuery\Serilog.Sinks.BigQuery.csproj", "{4B5CF37F-C762-40B7-BB20-5DFC81D78362}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigQuery.Serilog.Sink.Tests", "BigQuery.Serilog.Sink.Tests\BigQuery.Serilog.Sink.Tests.csproj", "{F1F9B46D-040D-4523-893C-374423934392}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Sinks.BigQuery.Tests", "Serilog.Sinks.BigQuery.Tests\Serilog.Sinks.BigQuery.Tests.csproj", "{B321FB58-8AE6-44B5-ABD4-69D4EAF3BBCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigQuery.Serilog.Sink.Sample", "BigQuery.Serilog.Sink.Sample\BigQuery.Serilog.Sink.Sample.csproj", "{91759383-A774-491C-8F4E-DCBBEEC6CF06}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Sinks.BigQuery.Sample", "Serilog.Sinks.BigQuery.Sample\Serilog.Sinks.BigQuery.Sample.csproj", "{9A550FDF-C9E6-405B-924D-8A53B6A621BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2BBEFCC7-7030-4F6B-97FC-0EA7AC20CA79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2BBEFCC7-7030-4F6B-97FC-0EA7AC20CA79}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2BBEFCC7-7030-4F6B-97FC-0EA7AC20CA79}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2BBEFCC7-7030-4F6B-97FC-0EA7AC20CA79}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F1F9B46D-040D-4523-893C-374423934392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F1F9B46D-040D-4523-893C-374423934392}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F1F9B46D-040D-4523-893C-374423934392}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F1F9B46D-040D-4523-893C-374423934392}.Release|Any CPU.Build.0 = Release|Any CPU
-		{91759383-A774-491C-8F4E-DCBBEEC6CF06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{91759383-A774-491C-8F4E-DCBBEEC6CF06}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{91759383-A774-491C-8F4E-DCBBEEC6CF06}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{91759383-A774-491C-8F4E-DCBBEEC6CF06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B5CF37F-C762-40B7-BB20-5DFC81D78362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B5CF37F-C762-40B7-BB20-5DFC81D78362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B5CF37F-C762-40B7-BB20-5DFC81D78362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B5CF37F-C762-40B7-BB20-5DFC81D78362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B321FB58-8AE6-44B5-ABD4-69D4EAF3BBCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B321FB58-8AE6-44B5-ABD4-69D4EAF3BBCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B321FB58-8AE6-44B5-ABD4-69D4EAF3BBCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B321FB58-8AE6-44B5-ABD4-69D4EAF3BBCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A550FDF-C9E6-405B-924D-8A53B6A621BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A550FDF-C9E6-405B-924D-8A53B6A621BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A550FDF-C9E6-405B-924D-8A53B6A621BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A550FDF-C9E6-405B-924D-8A53B6A621BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

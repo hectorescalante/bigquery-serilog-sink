@@ -1,18 +1,18 @@
 ﻿using BigQuery.Schema.Helper.Core;
-using BigQuery.Serilog.Sink.Core;
-using BigQuery.Serilog.Sink.Core.Abstractions;
+using Serilog.Sinks.BigQuery.Core;
+using Serilog.Sinks.BigQuery.Core.Abstractions;
 using Google.Cloud.BigQuery.V2;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BigQuery.Serilog.Sink.Infrastructure
+namespace Serilog.Sinks.BigQuery.Infrastructure
 {
   internal class BigQueryConnection : IConnection
   {
-    private readonly SinkOptions _sinkOptions;
-    public BigQueryConnection(SinkOptions sinkOptions) =>
+    private readonly BigQuerySinkOptions _sinkOptions;
+    public BigQueryConnection(BigQuerySinkOptions sinkOptions) =>
       _sinkOptions = sinkOptions;
 
     public static BigQueryDataset Dataset { get; set; }
