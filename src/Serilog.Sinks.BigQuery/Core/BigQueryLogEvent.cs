@@ -23,7 +23,7 @@ namespace Serilog.Sinks.BigQuery.Core
         LevelNumber = (int)logEvent.Level,
         LevelName = logEvent.Level.ToString(),
         Template = logEvent.MessageTemplate.Text,
-        Message = logEvent.MessageTemplate.Render(logEvent.Properties),
+        Message = logEvent.RenderMessage(),
         Properties = new List<BigQueryLogEventProperty>(),
         ExceptionStackTrace = logEvent.Exception?.StackTrace
       };
